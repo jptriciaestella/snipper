@@ -6,11 +6,10 @@ body{
 header{
     background-image: url('../Assets/Background.png');
     background-size: cover;
-    width: 100vw;
+    width: 100%;
 }
 
 .navbar{
-    min-height: 1vw;
     padding: 4vh 10vw;
     display: flex;
     justify-content: space-between;
@@ -19,18 +18,13 @@ header{
 
 .navbar-right{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     white-space: nowrap;
     color: rgba(0, 0, 0, 0.589)
 }
 
-.hamburger-menu{
+.hamburger-menu, .menu-cont{
     display: none;
-}
-
-.navbar-right h4{
-    margin: 0 10px;
 }
 
 .start-button{
@@ -45,7 +39,7 @@ header{
 
 .start-button:hover{
     cursor: pointer;
-    background: rgb(41, 41, 41);
+    background: rgb(54, 54, 54);
 }
 
 #get-started{
@@ -67,9 +61,10 @@ header{
 }
 
 .header-content h1{
-    font-size: 7.8vh;
+    font-size: max(7.8vh, 45px);
     font-weight: bolder;
     margin: 0;
+    z-index: 1;
 }
 
 .header-content h5{
@@ -113,6 +108,26 @@ header{
     color: rgba(0, 0, 0, 0.589)
 }
 
+footer{
+    margin-top: 10vh;
+    padding: 4vh 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    font-size: max(12px, 2vh);
+}
+
+footer span:first-child{
+    margin-right: 2vh;
+}
+
+.footer-text{
+    color: rgba(0, 0, 0, 0.589);
+    font-weight: lighter;
+}
+
+
 @media (max-width: 961px)  { 
     .content{
         flex-direction: column;
@@ -140,4 +155,54 @@ header{
         display: block;
         float: right;
     }
+
+    .menu-close{
+        margin-bottom: 10vw;
+    }
+
+    .menu-cont{
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: rgba(0, 0, 0, 0.589);
+        width: 200px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translate(200%, 0);
+        padding: 4vh 10vw;
+        transition: transform .5s ease-in-out;
+        z-index: 999999;
+    }
+
+    .menu-cont.start-button{
+        white-space: normal;
+    }
+
+    .menu-cont.active{
+        transform: translate(0, 0);
+        right: 0;
+    }
+
+    #sign-in-mobile{
+        margin: 40px 0;
+    }
+
+    .content-text h1{
+        font-size: 4.8vh;
+    }
+
+    .header-content h5, .content-text h5{
+        font-size: max(2.3vh, 15px);
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
 }
