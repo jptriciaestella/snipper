@@ -68,7 +68,7 @@ header{
 }
 
 .header-content h5{
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 2.5vw 0;
     font-weight: normal;
     color: rgba(0, 0, 0, 0.589)
@@ -97,15 +97,15 @@ header{
 }
 
 .content-text h1{
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: bolder;
     margin: 0;
 }
 
 .content-text h5{
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 2.5vw 0;
-    font-weight: lighter;
+    font-weight: normal;
     color: rgba(0, 0, 0, 0.589)
 }
 
@@ -128,8 +128,25 @@ footer span:first-child{
     font-weight: lighter;
 }
 
+@media (max-width: 1299px)  { 
+    .content-text h1{
+        font-size: 3.5em;
+    }
+    
+    .content-text h5{
+        font-size: 1.8em;
+    }
+}
 
 @media (max-width: 961px)  { 
+    .header-content h1{
+        font-size: 4.5em
+    }
+    
+    .header-content h5{
+        font-size: 1.8em;
+    }
+
     .content{
         flex-direction: column;
         align-items: center;
@@ -193,11 +210,11 @@ footer span:first-child{
     }
 
     .header-content h1{
-        font-size: 3em
+        font-size: 3.5em
     }
 
     .content-text h1{
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .content img{
@@ -205,7 +222,8 @@ footer span:first-child{
     }
 
     .header-content h5, .content-text h5{
-        font-size: max(1em, 15px);
+        font-size: max(1.4em, 15px);
+        margin: +20px +0;
     }
 
     footer{
@@ -214,6 +232,17 @@ footer span:first-child{
         font-size: 1em;
         white-space: normal;
     }
+}
 
+@media (max-width: 365px){
+    .header-content h1{
+        font-size: 3em
+    }
 
+    .content-text h1{
+        font-size: 2em;
+    }
+    .header-content h5, .content-text h5{
+        font-size: 1.2em;
+    }
 }
